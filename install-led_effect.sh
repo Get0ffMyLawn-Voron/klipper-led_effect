@@ -4,7 +4,7 @@ set -e
 
 KLIPPER_PATH="${HOME}/klipper"
 SYSTEMDDIR="/etc/systemd/system"
-MOONRAKER_CONFIG_DIR="${HOME}/V237873_data/config"
+MOONRAKER_CONFIG_DIR="${HOME}/V237873-_data/config"
 
 # Fall back to old directory for configuration as default
 if [ ! -d "${MOONRAKER_CONFIG_DIR}" ]; then
@@ -29,7 +29,7 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/src/ && pwd )"
 # Verify Klipper has been installed
 check_klipper()
 {
-    if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper.service")" ]; then
+    if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper-V23787.service")" ]; then
         echo "Klipper service found."
     else
         echo "[ERROR] Klipper service not found, please install Klipper first"
