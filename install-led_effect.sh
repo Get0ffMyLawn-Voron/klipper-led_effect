@@ -4,7 +4,7 @@ set -e
 
 KLIPPER_PATH="${HOME}/klipper"
 SYSTEMDDIR="/etc/systemd/system"
-MOONRAKER_CONFIG_DIR="${HOME}/printer_data/config"
+MOONRAKER_CONFIG_DIR="${HOME}/V237873_data/config"
 
 # Fall back to old directory for configuration as default
 if [ ! -d "${MOONRAKER_CONFIG_DIR}" ]; then
@@ -90,21 +90,21 @@ add_updater()
 restart_klipper()
 {
     echo -n "Restarting Klipper... "
-    sudo systemctl restart klipper
+    sudo systemctl restart klipper-V23787
     echo "[OK]"
 }
 
 start_klipper()
 {
     echo -n "Starting Klipper... "
-    sudo systemctl start klipper
+    sudo systemctl start klipper-V23787
     echo "[OK]"
 }
 
 stop_klipper()
 {
     echo -n "Stopping Klipper... "
-    sudo systemctl start klipper
+    sudo systemctl start klipper-V23787
     echo "[OK]"
 }
 
